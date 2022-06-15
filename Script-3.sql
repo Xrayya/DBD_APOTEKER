@@ -1,5 +1,5 @@
 ------------------------
--- 		  DDL		  --
+-- 		  DDkL		  --
 ------------------------
 CREATE SCHEMA APOTEK;
 
@@ -44,7 +44,8 @@ CREATE TABLE APOTEK.PEMBELI (
 	ID_PEMBELI				VARCHAR(5) NOT NULL PRIMARY KEY,
 	NAMA_DEPAN				VARCHAR(20),
 	NAMA_BELAKANG			VARCHAR(20),
-	GENDER					CHAR(1) CHECK (GENDER IN ('P', 'W'))
+	GENDER					CHAR(1) CHECK (GENDER IN ('P', 'W')),
+	TGL_LAHIR				DATE
 );
 
 CREATE TABLE APOTEK.KARYAWAN (
