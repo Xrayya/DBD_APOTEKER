@@ -26,7 +26,7 @@ CREATE TABLE APOTEK.OBAT (
 	ID_AP					VARCHAR(5),
 	NAMA_OBAT				VARCHAR(45),
 	HARGA					INTEGER,
-	CARA_MINUM				VARCHAR(255),
+	CARA_PAKAI				VARCHAR(255),
 	FOREIGN KEY(ID_AP)
 		REFERENCES APOTEK.APOTEKER(ID_AP)
 );
@@ -67,3 +67,40 @@ CREATE TABLE APOTEK.TRANSAKSI_PEMBELIAN (
 	FOREIGN KEY(ID_OBAT)
 		REFERENCES APOTEK.OBAT(ID_OBAT)
 );
+
+------------------------
+-- 		  DML		  --
+------------------------
+
+INSERT INTO APOTEK.SUPPLIER 
+VALUES
+	('S01', 'Jl. Sumbersari No.54, Kota Malang'),
+	('S02', 'Perumahan Grand Residence Blok T-5, Surabaya'),
+	('S03', 'Jl. Babatan No.420, Kota Pasuruan');
+
+INSERT INTO APOTEK.APOTEKER 
+VALUES
+	('A01', 'Azhary', 'Munir', 'Jl.Watugong No.24, Malang', 'P', '2003-1-14', 'S1', 'SISTEM INFORMASI', 'UNIVERSITAS BRAWIJAYA', '2022'),
+	('A02', 'Muhammad', 'Jibril', 'Jl.Watugong No.2, Malang', 'P', '2003-9-3', 'S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022'),
+	('A03', 'Novia', 'Balqis', 'Jl.Kenangan No.69, Malang', 'W', '1997-4-27','S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022');
+
+INSERT INTO APOTEK.PEMBELI 
+VALUES 
+	('001', 'Abdan', 'Fikri', 'P', '2002-10-15'),
+	('002', 'Itqany', 'Rachman', 'P', '2003-4-21'),
+	('003', 'Naufal', 'Dzaky', 'P', '2003-7-25'),
+	('004', 'Achmad', 'Nizar', 'P', '2003-5-24'),
+	('005', 'Gading', 'Mahendra', 'P', '2005-10-12'),
+	('006', 'Indra', 'Hermawan', 'P', '2003-3-20'),
+	('007', 'Frederica', 'Greenhill', 'W', '1996-4-12'),
+	('008', 'Sisca', 'Kohl', 'W', '1984-6-22'),
+	('009', 'Yor', 'Forger', 'W', '1981-4-9'),
+	('010', 'Syifa', 'Nayla', 'W', '2003-3-24');
+
+INSERT INTO APOTEK.KARYAWAN 
+VALUES
+	('K01', 'Yanto', 'Hermawan'),
+	('K02', 'Sueb', 'Gabriel'),
+	('K03', 'Marcel', 'Jamaludin'),
+	('K04', 'Vivi', 'Skyavers');
+
