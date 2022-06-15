@@ -104,3 +104,25 @@ VALUES
 	('K03', 'Marcel', 'Jamaludin'),
 	('K04', 'Vivi', 'Skyavers');
 
+INSERT INTO APOTEK.OBAT
+VALUES
+	('M01', NULL, 'PROGMAG', 8500, 'Diminum sebelum makan'),
+	('M02', NULL, 'ANTASIDA DOEN', 4000, 'Diminum sebelum makan'),
+	('M03', NULL, 'MYLANTA LIQ', 5000, 'Diminum sebelum makan'),
+	('M04', NULL, 'RANITIDINE 10 TAB', 2000, 'Diminum sebelum makan'),
+	('M05', NULL, 'OMEPRAZOLE', 3609, 'Diminum sebelum makan'),
+	('M06', 'A01', 'M-H02', 10000, 'Diminum satu kapsul saat maag'),
+	('B01', NULL, 'WOODS', 21000, 'Diminum setelah makan'),
+	('B02', NULL, 'SILADEX', 1900, 'Diminum setelah makan'),
+	('B03', NULL, 'PIM-TRA-KOL', 5500, 'Diminum setelah makan'),
+	('B04', NULL, 'OBP-01', 3000, 'Diminum setelah makan'),
+	('B05', NULL, 'KONIDIN', 17000, 'Diminum setelah makan'),
+	('B06', NULL, 'KOMIX', 7000, 'Diminum setelah makan'),
+	('B07', NULL, 'VICKS', 15000, 'Diminum setelah makan'),
+	('KM01', NULL, 'LISTERINE', 32000, 'Dikumur sesudah makan atau sebelum tidur'),
+	('KM02', NULL, 'BETADINE', 27000, 'Dikumur sesudah makan atau sebelum tidur'),
+	('KM03', NULL, 'PEPSODENT', 24000, 'Dikumur sesudah makan atau sebelum tidur'),
+	('KM04', NULL, 'COLGATE PLAX', 22000, 'Dikumur sesudah makan atau sebelum tidur'),
+	('KL01', NULL, 'INERSON', 28000, 'Dioleskan pada are yang luka atau gatal secara merata'),
+	('KL02', NULL, 'SALEP PAGODA', 12000, 'Dioleskan pada are yang luka atau gatal secara merata'),
+	('KL03', 'A02', 'BOORTALK', 7000, 'Ditaburkan ke kulit secara merata pada bagian tubuh yang sering mengalami gesekan');
