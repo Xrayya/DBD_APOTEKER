@@ -84,6 +84,62 @@ VALUES
     ('A02', 'Muhammad', 'Jibril', 'Jl.Watugong No.2, Malang', 'P', '2003-9-3', 'S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022'),
     ('A03', 'Novia', 'Balqis', 'Jl.Kenangan No.69, Malang', 'W', '1997-4-27','S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022');
 
+INSERT INTO APOTEK.OBAT
+VALUES
+    ('M01', NULL, 'PROGMAG LIQ', 8500, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur. Kocok dulu sebelum diminum'),
+    ('M02', NULL, 'ANTASIDA DOEN', 4000, 'Dewasa : 1-2 tablet, 3-4 kali per hari. Anak (6-12 tahun) : 0.5-1 tablet, 3-4 kali per hari. Sebaiknya diberikan pada saat perut kosong: Berikan 1-2 jam setelah makan dan sebelum tidur. Kunyah tablet degan baik sebelum ditelan.'),
+    ('M03', NULL, 'MYLANTA LIQ', 5000, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur. Kocok dulu sebelum diminum'),
+    ('M04', NULL, 'RANITIDINE 10 TAB', 2000, 'Dapat diminum sebelum atau sesudah makan. Digunakan sebanyak satu atau dua kali sehari. Minum sesuai dosis. Tidak meningkatkan dosis lebih dari yang seharusnya. Minum secara teratur.'),
+    ('M05', NULL, 'OMEPRAZOLE', 3609, 'dapat diminum sehari sekali, sebelum makan di pagi hari. Jika Anda mengonsumsi omeprazole 2 kali sehari, maka obat dapat dikonsumsi pada pagi dan sore hari. Telan kapsul secara utuh, jangan mengunyah atau menghancurkan kapsul. Jika Anda mengalami kesulitan menelan obat, konsultasikan kepada dokter.'),
+    ('M06', 'A01', 'M-H02', 10000, 'Diminum satu kapsul saat maag'),
+    ('B01', NULL, 'WOODS', 21000, 'Dewasa dan anak usia > 12 tahun: 2 sendok teh (10 ml), di minum 3 kali sehari. Anak usia 6-12 tahun: 1 sendok teh (5 ml), di minum 3 kali sehari.'),
+    ('B02', NULL, 'SILADEX', 1900, 'Diminum setelah makan'),
+    ('B03', NULL, 'PIM-TRA-KOL', 5500, 'Diminum setelah makan'),
+    ('B04', NULL, 'OBP-01', 3000, 'Diminum setelah makan'),
+    ('B05', NULL, 'KONIDIN', 17000, 'Diminum setelah makan'),
+    ('B06', NULL, 'KOMIX', 7000, 'Diminum setelah makan'),
+    ('B07', NULL, 'VICKS', 15000, 'Diminum setelah makan'),
+    ('KM01', NULL, 'LISTERINE', 32000, 'Dikumur sesudah makan atau sebelum tidur'),
+    ('KM02', NULL, 'BETADINE', 27000, 'Dikumur sesudah makan atau sebelum tidur'),
+    ('KM03', NULL, 'PEPSODENT', 24000, 'Dikumur sesudah makan atau sebelum tidur'),
+    ('KM04', NULL, 'COLGATE PLAX', 22000, 'Dikumur sesudah makan atau sebelum tidur'),
+    ('KL01', NULL, 'INERSON', 28000, 'Dioleskan pada are yang luka atau gatal secara merata'),
+    ('KL02', NULL, 'SALEP PAGODA', 12000, 'Dioleskan pada are yang luka atau gatal secara merata'),
+    ('KL03', 'A02', 'BOORTALK', 7000, 'Ditaburkan ke kulit secara merata pada bagian tubuh yang sering mengalami gesekan');
+
+INSERT INTO APOTEK.SUPLAI
+VALUES
+    ('S02', 'MO1'),
+    ('S01', 'KL01'),
+    ('S03', 'M02'),
+    ('S02', 'KM01'),
+    ('S03', 'M01'),
+    ('S01', 'M01'),
+    ('S01', 'M02'),
+    ('S03', 'M03'),
+    ('S01', 'M04'),
+    ('S02', 'M05'),
+    ('S01', 'M06'),
+    ('S03', 'KM01'),
+    ('S03', 'B01'),
+    ('S03', 'B02'),
+    ('S02', 'B03'),
+    ('S01', 'B04'),
+    ('S02', 'B05'),
+    ('S03', 'B05'),
+    ('S01', 'KL03')
+    ('S03', 'B06'),
+    ('S02', 'B07'),
+    ('S01', 'B01'),
+    ('S01', 'KM01'),
+    ('S03', 'KM02'),
+    ('S01', 'M03'),
+    ('S02', 'KM03'),
+    ('S03', 'KM04'),
+    ('S02', 'KL01'),
+    ('S01', 'KL02'),
+    ('S03', 'KL03');
+
 INSERT INTO APOTEK.PEMBELI 
 VALUES 
     ('001', 'Abdan', 'Fikri', 'P', '2002-10-15'),
@@ -103,26 +159,3 @@ VALUES
     ('K02', 'Sueb', 'Gabriel'),
     ('K03', 'Marcel', 'Jamaludin'),
     ('K04', 'Vivi', 'Skyavers');
-
-INSERT INTO APOTEK.OBAT
-VALUES
-    ('M01', NULL, 'PROGMAG', 8500, 'Diminum sebelum makan'),
-    ('M02', NULL, 'ANTASIDA DOEN', 4000, 'Diminum sebelum makan'),
-    ('M03', NULL, 'MYLANTA LIQ', 5000, 'Diminum sebelum makan'),
-    ('M04', NULL, 'RANITIDINE 10 TAB', 2000, 'Diminum sebelum makan'),
-    ('M05', NULL, 'OMEPRAZOLE', 3609, 'Diminum sebelum makan'),
-    ('M06', 'A01', 'M-H02', 10000, 'Diminum satu kapsul saat maag'),
-    ('B01', NULL, 'WOODS', 21000, 'Diminum setelah makan'),
-    ('B02', NULL, 'SILADEX', 1900, 'Diminum setelah makan'),
-    ('B03', NULL, 'PIM-TRA-KOL', 5500, 'Diminum setelah makan'),
-    ('B04', NULL, 'OBP-01', 3000, 'Diminum setelah makan'),
-    ('B05', NULL, 'KONIDIN', 17000, 'Diminum setelah makan'),
-    ('B06', NULL, 'KOMIX', 7000, 'Diminum setelah makan'),
-    ('B07', NULL, 'VICKS', 15000, 'Diminum setelah makan'),
-    ('KM01', NULL, 'LISTERINE', 32000, 'Dikumur sesudah makan atau sebelum tidur'),
-    ('KM02', NULL, 'BETADINE', 27000, 'Dikumur sesudah makan atau sebelum tidur'),
-    ('KM03', NULL, 'PEPSODENT', 24000, 'Dikumur sesudah makan atau sebelum tidur'),
-    ('KM04', NULL, 'COLGATE PLAX', 22000, 'Dikumur sesudah makan atau sebelum tidur'),
-    ('KL01', NULL, 'INERSON', 28000, 'Dioleskan pada are yang luka atau gatal secara merata'),
-    ('KL02', NULL, 'SALEP PAGODA', 12000, 'Dioleskan pada are yang luka atau gatal secara merata'),
-    ('KL03', 'A02', 'BOORTALK', 7000, 'Ditaburkan ke kulit secara merata pada bagian tubuh yang sering mengalami gesekan');
