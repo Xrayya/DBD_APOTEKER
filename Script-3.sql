@@ -1,5 +1,5 @@
 ------------------------
--- 		  DDkL		  --
+--          DDL       --
 ------------------------
 CREATE SCHEMA APOTEK;
 
@@ -69,7 +69,7 @@ CREATE TABLE APOTEK.TRANSAKSI_PEMBELIAN (
 );
 
 ------------------------
--- 		  DML		  --
+-- 		  DML	      --
 ------------------------
 
 INSERT INTO APOTEK.SUPPLIER 
@@ -78,21 +78,34 @@ VALUES
     ('S02', 'Perumahan Grand Residence Blok T-5, Surabaya'),
     ('S03', 'Jl. Babatan No.420, Kota Pasuruan');
 
+SELECT * FROM APOTEK.SUPPLIER;
+
 INSERT INTO APOTEK.APOTEKER 
 VALUES
-    ('A01', 'Azhary', 'Munir', 'Jl.Watugong No.24, Malang', 'P', '2003-1-14', 'S1', 'SISTEM INFORMASI', 'UNIVERSITAS BRAWIJAYA', '2022'),
-    ('A02', 'Muhammad', 'Jibril', 'Jl.Watugong No.2, Malang', 'P', '2003-9-3', 'S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022'),
-    ('A03', 'Novia', 'Balqis', 'Jl.Kenangan No.69, Malang', 'W', '1997-4-27','S1', 'KEDOKTERAN', 'UNIVERSITAS BRAWIJAYA', '2022');
+    ('A01', 'Azhary', 'Munir', 'Jl.Watugong No.24, Malang', 'P', '2003-1-14', 'S1', 'SISTEM INFORMASI',
+        'UNIVERSITAS BRAWIJAYA', '2022'),
+    ('A02', 'Muhammad', 'Jibril', 'Jl.Watugong No.2, Malang', 'P', '2003-9-3', 'S1', 'KEDOKTERAN',
+        'UNIVERSITAS BRAWIJAYA', '2022'),
+    ('A03', 'Novia', 'Balqis', 'Jl.Kenangan No.69, Malang', 'W', '1997-4-27','S1', 'KEDOKTERAN',
+        'UNIVERSITAS BRAWIJAYA', '2022');
+
+SELECT * FROM APOTEK.APOTEKER;
 
 INSERT INTO APOTEK.OBAT
 VALUES
-    ('M01', NULL, 'PROGMAG LIQ', 8500, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur. Kocok dulu sebelum diminum'),
-    ('M02', NULL, 'ANTASIDA DOEN', 4000, 'Diminum 1-2 jam sebelum tidur. Sebaiknya diberikan dalam keadaan perut kosong'),
-    ('M03', NULL, 'MYLANTA LIQ', 5000, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur. Kocok dulu sebelum diminum'),
-    ('M04', NULL, 'RANITIDINE 10 TAB', 2000, 'Dapat diminum sebelum atau sesudah makan. Digunakan sebanyak satu atau dua kali sehari. Minum sesuai dosis. Minum secara teratur.'),
-    ('M05', NULL, 'OMEPRAZOLE', 3609, 'dapat diminum sehari sekali, sebelum makan di pagi hari. Telan kapsul secara utuh, jangan mengunyah atau menghancurkan kapsul.'),
+    ('M01', NULL, 'PROGMAG LIQ', 8500, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur.
+        Kocok dulu sebelum diminum'),
+    ('M02', NULL, 'ANTASIDA DOEN', 4000, 'Diminum 1-2 jam sebelum tidur. Sebaiknya diberikan dalam keadaan
+        perut kosong'),
+    ('M03', NULL, 'MYLANTA LIQ', 5000, 'Diminum 1-2 jam sebelum makan, saat timbul gejala, atau sebelum tidur.
+        Kocok dulu sebelum diminum'),
+    ('M04', NULL, 'RANITIDINE 10 TAB', 2000, 'Dapat diminum sebelum atau sesudah makan. Digunakan sebanyak
+        satu atau dua kali sehari. Minum sesuai dosis. Minum secara teratur.'),
+    ('M05', NULL, 'OMEPRAZOLE', 3609, 'dapat diminum sehari sekali, sebelum makan di pagi hari. Telan kapsul
+        secara utuh, jangan mengunyah atau menghancurkan kapsul.'),
     ('M06', 'A01', 'M-H02', 10000, 'Diminum satu kapsul saat maag'),
-    ('B01', NULL, 'WOODS', 21000, 'Dewasa dan anak usia > 12 tahun: 2 sendok teh (10 ml), di minum 3 kali sehari. Anak usia 6-12 tahun: 1 sendok teh (5 ml), di minum 3 kali sehari.'),
+    ('B01', NULL, 'WOODS', 21000, 'Dewasa dan anak usia > 12 tahun: 2 sendok teh (10 ml), di minum 3 kali sehari.
+        Anak usia 6-12 tahun: 1 sendok teh (5 ml), di minum 3 kali sehari.'),
     ('B02', NULL, 'SILADEX', 1900, 'Diminum setelah makan'),
     ('B03', NULL, 'PIM-TRA-KOL', 5500, 'Diminum setelah makan'),
     ('B04', NULL, 'OBP-01', 3000, 'Diminum setelah makan'),
@@ -105,7 +118,10 @@ VALUES
     ('KM04', NULL, 'COLGATE PLAX', 22000, 'Dikumur sesudah makan atau sebelum tidur'),
     ('KL01', NULL, 'INERSON', 28000, 'Dioleskan pada are yang luka atau gatal secara merata'),
     ('KL02', NULL, 'SALEP PAGODA', 12000, 'Dioleskan pada are yang luka atau gatal secara merata'),
-    ('KL03', 'A02', 'BOORTALK', 7000, 'Ditaburkan ke kulit secara merata pada bagian tubuh yang sering mengalami gesekan');
+    ('KL03', 'A02', 'BOORTALK', 7000, 'Ditaburkan ke kulit secara merata pada bagian tubuh yang sering
+        mengalami gesekan');
+
+SELECT * FROM APOTEK.OBAT;
 
 INSERT INTO APOTEK.SUPLAI
 VALUES
@@ -140,6 +156,8 @@ VALUES
     ('KL02', 'S01'),
     ('KL03', 'S03');
 
+SELECT * FROM APOTEK.SUPLAI;
+
 INSERT INTO APOTEK.PEMBELI 
 VALUES 
     ('001', 'Abdan', 'Fikri', 'P', '2002-10-15'),
@@ -153,12 +171,16 @@ VALUES
     ('009', 'Yor', 'Forger', 'W', '1981-4-9'),
     ('010', 'Syifa', 'Nayla', 'W', '2003-3-24');
 
+SELECT * FROM APOTEK.PEMBELI;
+
 INSERT INTO APOTEK.KARYAWAN 
 VALUES
     ('K01', 'Yanto', 'Hermawan'),
     ('K02', 'Sueb', 'Gabriel'),
     ('K03', 'Marcel', 'Jamaludin'),
     ('K04', 'Vivi', 'Skyavers');
+
+SELECT * FROM APOTEK.KARYAWAN;
 
 INSERT INTO APOTEK.TRANSAKSI_PEMBELIAN
 VALUES
@@ -169,25 +191,38 @@ VALUES
     ('004', 'K03', 'B03', 5, '2022-06-30'),
     ('007', 'K02', 'B02', 5, '2022-07-01');
 
+SELECT * FROM APOTEK.TRANSAKSI_PEMBELIAN;
+
+------------------------
+--    Other Queries   --
+------------------------
+
 SELECT      ID_PEMBELI, NAMA_DEPAN, NAMA_BELAKANG,
             GENDER, TGL_LAHIR
 FROM        APOTEK.PEMBELI
 WHERE       NAMA_DEPAN LIKE 'A%';
 
-SELECT      ID_OBAT, COALESCE (ID_AP, 'TIDAK DIRACIK') AS ID_AP,
-            NAMA_OBAT, HARGA, CARA_PAKAI
-FROM        APOTEK.OBAT;
+CREATE VIEW APOTEK.JUMLAH_TRANSAKSI AS
+SELECT      ID_OBAT,
+            COUNT(ID_OBAT) AS JUMLAH_TRANSAKSI_PEMBELIAN
+FROM        APOTEK.TRANSAKSI_PEMBELIAN
+GROUP BY    ID_OBAT;
 
-SELECT      AVG(HARGA) AS RATA_RATA_HARGA
+SELECT      O.ID_OBAT, COALESCE (O.ID_AP, 'TIDAK DIRACIK') AS ID_AP,
+            O.NAMA_OBAT, O.HARGA,
+            COALESCE(JK.JUMLAH_TRANSAKSI_PEMBELIAN, 0) AS JUMLAH_TRANSAKSI_PEMBELIAN
+FROM        APOTEK.OBAT O
+            LEFT OUTER JOIN APOTEK.JUMLAH_TRANSAKSI JK
+            ON O.ID_OBAT = JK.ID_OBAT
+ORDER BY    O.ID_OBAT;
+
+SELECT      AVG(HARGA) AS RATA_RATA_HARGA_OBAT
 FROM        APOTEK.OBAT;
 
 SELECT      *
 FROM        APOTEK.PEMBELI
-WHERE       GENDER = 'P' AND YEAR(TGL_LAHIR) = '2003';
-
-SELECT      *
-FROM        APOTEK.OBAT 
-WHERE       HARGA > 10000;
+WHERE       GENDER = 'P' AND
+            YEAR(CURRENT DATE) - YEAR(TGL_LAHIR) >= 19;
 
 SELECT      COUNT(ID_OBAT) AS TOTAL_JENIS_OBAT
 FROM        APOTEK.OBAT;
@@ -195,19 +230,19 @@ FROM        APOTEK.OBAT;
 SELECT      MIN(HARGA) AS OBAT_TERMURAH, MAX(HARGA) AS OBAT_TERMAHAL
 FROM        APOTEK.OBAT;
 
-SELECT      o.NAMA_OBAT, o.HARGA,
-            CONCAT(CONCAT(a.NAMA_DEPAN, ' '), a.NAMA_BELAKANG) AS NAMA_LENGKAP_APOTEKER
-FROM        APOTEK.APOTEKER a, APOTEK.OBAT o
-WHERE       o.ID_AP = a.ID_AP;
+SELECT      O.NAMA_OBAT, O.HARGA,
+            CONCAT(CONCAT(A.NAMA_DEPAN, ' '), A.NAMA_BELAKANG) AS NAMA_LENGKAP_APOTEKER
+FROM        APOTEK.APOTEKER A, APOTEK.OBAT O
+WHERE       O.ID_AP = A.ID_AP;
 
-SELECT      S.ID_SUPPLIER,
-            S.ALAMAT_SUPPLIER,
-            O.ID_OBAT, O.NAMA_OBAT
+SELECT      O.ID_OBAT, O.NAMA_OBAT,
+            S.ID_SUPPLIER, S.ALAMAT_SUPPLIER
 FROM        APOTEK.SUPPLIER S
             JOIN APOTEK.SUPLAI S_O
             ON S.ID_SUPPLIER = S_O.ID_SUPPLIER
             JOIN APOTEK.OBAT O
-            ON S_O.ID_OBAT = O.ID_OBAT;
+            ON S_O.ID_OBAT = O.ID_OBAT
+ORDER BY    O.ID_OBAT;
 
 SELECT      ID_PEMBELI AS ID, NAMA_DEPAN, NAMA_BELAKANG
 FROM        APOTEK.PEMBELI
