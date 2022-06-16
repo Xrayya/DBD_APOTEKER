@@ -159,3 +159,8 @@ VALUES
     ('K02', 'Sueb', 'Gabriel'),
     ('K03', 'Marcel', 'Jamaludin'),
     ('K04', 'Vivi', 'Skyavers');
+
+SELECT      S.ID_SUPPLIER, O.ID_OBAT, O.NAMA_OBAT
+FROM        APOTEK.SUPPLIER S JOIN APOTEK.SUPLAI S_O
+            ON S.ID_SUPPLIER = S_O.ID_SUPPLIER
+            JOIN APOTEK.OBAT O
